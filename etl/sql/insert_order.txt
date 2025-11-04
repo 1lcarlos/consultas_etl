@@ -1,0 +1,7 @@
+# sql/insert_order.txt
+# Archivo de configuración para el orden de ejecución de inserts
+# Cada línea debe contener el nombre del archivo SQL (con extensión)
+# El orden respeta las dependencias de llaves foráneas
+
+# Ejemplo de orden (ajustar según tu modelo relacional):
+01_insert_predios.sql
