@@ -6,4 +6,6 @@
 # Ejemplo de orden (ajustar según tu modelo relacional):
 #01_insert_predios.sql
 #02_insert_terrenos.sql
-03_insert_col_uebaunit_predio_terreno.sql
+#03_insert_col_uebaunit_predio_terreno.sql
+04_insert_caracterisiticasunidadconstruccion.sql
+
