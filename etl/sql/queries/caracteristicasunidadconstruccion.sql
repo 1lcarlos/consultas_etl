@@ -1,11 +1,18 @@
-SELECT DISTINCT
+SELECT
+gc.id,
 identificador, 
-gu.text_code as tipo_unidad_construccion,
-total_plantas,
-uu.text_code as uso,
-anio_construccion,
+COALESCE(gu.text_code, 'Anexo') AS tipo_unidad_construccion,
+case
+    when total_plantas is null then 1
+    else total_plantas
+end as total_plantas,
+COALESCE(uu.text_code,'Anexo.Kioscos') as uso,
+case
+	when anio_construccion is null then '1512'
+	else anio_construccion
+end as anio_construccion,
 area as area_construida,
-observacion,
+observacion as observaciones,
 total_habitaciones, 
 total_banios, 
 total_locales 
