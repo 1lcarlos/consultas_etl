@@ -13,26 +13,21 @@ total_habitaciones,
 total_banios, 
 total_locales)
 SELECT
-nextval('{schema}.t_ili2db_seq'::regclass),  
+    cu.id, 
     uuid_generate_v4(),
     cu.identificador,
-    cu.tipo_unidad_construccion,
+    gu.t_id as tipo_unidad_construccion,
     cu.total_plantas,
     uu.t_id as uso,
-    anio_construccion,
-    area_construida,
-    CASE 
-        WHEN cc.total_calificacion BETWEEN 0 AND 25 THEN 'Malo'
-        WHEN cc.total_calificacion BETWEEN 26 AND 50 THEN 'Regular'
-        WHEN cc.total_calificacion BETWEEN 51 AND 75 THEN 'Bueno'
-        WHEN cc.total_calificacion BETWEEN 76 AND 100 THEN 'Excelente'
-        ELSE 'Sin información'
-    END AS estado_conservacion,
+    cu.anio_construccion,
+    cu.area_construida::numeric,
+    'Bueno' AS estado_conservacion,
     cu.observaciones,
-    cu.total_habitaciones,
-    cu.total_banios,
-    cu.total_locales
-
+    cu.total_habitaciones::numeric,
+    cu.total_banios::numeric,
+    cu.total_locales::numeric
     FROM tmp_caracteristicasunidadconstruccion cu
-    LEFT JOIN {schema}.gc_usouconstipo uu ON uu.ilicode ILIKE '%' || cu.uso || '%'
-    LEFT JOIN {schema}.cuc_calificacionconvencional cc ON cc.gc_caracteristicasunidadconstruccion = cu.id
+    LEFT JOIN {schema}.gc_unidadconstrucciontipo gu ON gu.ilicode = cu.tipo_unidad_construccion  
+    LEFT JOIN {schema}.gc_usouconstipo uu ON uu.ilicode = cu.uso;
+
+    
