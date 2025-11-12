@@ -17,7 +17,7 @@ p.municipio,
 codigo_orip, 
 case 
     when p.matricula_inmobiliaria is null then 1
-    when length(p.matricula_inmobiliaria ) >= 6 is null then 1
+    when length(p.matricula_inmobiliaria ) >= 6 then 1
     when p.matricula_inmobiliaria ~ '^[0-9]+$' and p.matricula_inmobiliaria::numeric = 0 then 1
     when p.matricula_inmobiliaria ~ '^[0-9]+$' then p.matricula_inmobiliaria::numeric
     else 1
