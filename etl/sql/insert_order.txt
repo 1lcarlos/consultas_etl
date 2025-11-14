@@ -9,3 +9,4 @@
 03_insert_col_uebaunit_predio_terreno.sql
 09_insert_interesados.sql
 010_insert_agrupaciones.sql
+011_insert_col_miembros.sql
