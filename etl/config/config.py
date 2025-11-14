@@ -7,19 +7,19 @@ Este archivo contiene todas las variables de configuración necesarias
 # Configuración de base de datos origen
 DB_ORIGEN = {
     'host': 'localhost',
-    'database': 'interno_origen',
+    'database': 'Septiembre',
     'user': 'postgres',
-    'password': 'contraseña123',
-    'port': 5433
+    'password': 'Jacobo1234',
+    'port': 5434
 }
 
 # Configuración de base de datos destino
 DB_DESTINO = {
     'host': 'localhost',
-    'database': 'interno_destino',
+    'database': 'modelo_interno',
     'user': 'postgres',
-    'password': 'contraseña123',
-    'port': 5433
+    'password': 'Jacobo1234',
+    'port': 5434
 }
 
 # Lista de esquemas a procesar
@@ -27,10 +27,10 @@ SCHEMAS = ['cun25436']
 
 # Configuración de rutas
 PATHS = {
-    'queries': './sql/queries/',
-    'inserts': './sql/inserts/',
-    'logs': './logs/',
-    'order_file': './sql/insert_order.txt'
+    'queries': 'C:\ETL_modelo_interno\consultas_etl\etl\sql\queries',
+    'inserts': 'C:\ETL_modelo_interno\consultas_etl\etl\sql\inserts',
+    'logs': 'C:\ETL_modelo_interno\consultas_etl\logs',
+    'order_file': 'C:\ETL_modelo_interno\consultas_etl\etl\sql\insert_order.txt'
 }
 
 # Configuración de rendimiento
