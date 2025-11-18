@@ -5,6 +5,9 @@ INSERT INTO {schema}.col_uebaunit (
 )
 SELECT
  nextval('{schema}.t_ili2db_seq'::regclass),
-ue_gc_unidadconstruccion,  
- unidad as baunit
-FROM tmp_col_uebaunit_predio_unidadconstruccion;
+gu.t_id,  
+p.t_id
+FROM tmp_col_uebaunit_predio_unidadconstruccion tmp
+join {schema}.gc_unidadconstruccion gu on tmp.ue_gc_unidadconstruccion = gu.local_id::numeric
+join {schema}.gc_predio p on tmp.baunit = p.local_id::numeric;
+
