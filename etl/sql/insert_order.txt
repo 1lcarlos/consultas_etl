@@ -4,9 +4,13 @@
 # El orden respeta las dependencias de llaves foráneas
 
 # Ejemplo de orden (ajustar según tu modelo relacional):
-01_insert_predios.sql
-02_insert_terrenos.sql
-03_insert_col_uebaunit_predio_terreno.sql
-09_insert_interesados.sql
-010_insert_agrupaciones.sql
-011_insert_col_miembros.sql
+#01_insert_predios.sql
+#02_insert_terrenos.sql
+#03_insert_col_uebaunit_predio_terreno.sql
+#04_insert_caracterisiticasunidadconstruccion
+#05_insert_calificacionconvencional.sql
+#06_insert_calificacionnoconvencional.sql
+#07_insert_unidadconstruccion.sql
+08_insert_col_uebaunit_predio_unidadconstruccion.sql
+#09_insert_interesados.sql
+#010_insert_agrupaciones.sql
