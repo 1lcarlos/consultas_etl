@@ -2,7 +2,7 @@ SELECT
     seq,
     avaluo_catastral,
     vigencia,
-    por_decreto,
+    por_decreto::integer,
     descripcion,
     gc_predio_avaluo,
     e.id
