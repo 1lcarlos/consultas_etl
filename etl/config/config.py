@@ -23,7 +23,8 @@ DB_DESTINO = {
 }
 
 # Lista de esquemas a procesar
-SCHEMAS = ['cun25436']
+SCHEMAS = ['cun25436']#,'cun25797','cun25489']
+#SCHEMAS = ['cun25489']
 
 # Configuración de rutas
 PATHS = {
